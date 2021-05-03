@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Post;
+use App\Models\Page;
 use Faker\Factory;
 use Illuminate\Database\Seeder;
 
@@ -17,7 +17,7 @@ class PagesSeeder extends Seeder
     {
         $faker = Factory::create();
 
-        $post = Post::create([
+        $page = Page::create([
             'title' => 'About-us',
             'content' => $faker->paragraph(),
             'comment_able' => 0,
@@ -27,7 +27,7 @@ class PagesSeeder extends Seeder
             'category_id'=> 1,
 
         ]);
-        $post = Post::create([
+        $page = Page::create([
             'title' => 'conatact',
             'content' => $faker->paragraph(),
             'comment_able' => 0,

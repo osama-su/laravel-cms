@@ -21,7 +21,7 @@ class PostsSeeder extends Seeder
         $categories = collect(Category::all()->modelKeys());
         $user = collect(User::where('id','>',2)->get()->modelKeys());
 
-        for ($i=0; $i < 100; $i++) { 
+        for ($i=0; $i < 10; $i++) { 
             $post = Post::create([
                 'title' => $faker->sentence(mt_rand(3,6),true),
                 'content' => $faker->paragraph(),
